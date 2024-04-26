@@ -1,0 +1,217 @@
+# DELEGATED REGULATION (EU) 2022/670 supplementing the ITS Directive (2010/40/EU)
+## Provision of EU-wide real-time traffic information services
+### Types of data on infrastructure
+
+**Road network links and their physical attributes – _geometry_:** the minimum information required for representing in a centerline or more precise manner the geometry of a road network’s links that connect two positions and therefore form a continuous path (without branches).
+>Considering that road links constitute curvilinear elements, their geometry, according to INSPIRE data specifications, can be represented through the GM_Curve object included in the GM_Object hierarchy (ISO 19107).
+
+>Alternatively, geometry can be provided through a piecewise linear representation.
+
+>Reference/additional info: https://inspire.ec.europa.eu/id/document/tg/tn
+
+**Road network links and their physical attributes – _road width_:** the minimum information required for indicating the width of a road network’s links.
+>This information is addressed as encompassing in a discretized and systematic manner various components of the road surface, including driving lanes, hard shoulders, medians, parking space, and the roadside.[^1]
+[^1]: Despite the fact that traffic capacity is the main concern of various RTTI-related use cases, lateral clearance constitutes a contextual factor for determining free-flow speed and, in turn, traffic capacity.
+
+**Road network links and their physical attributes – _number of lanes_:** the minimum information required for indicating the number of lanes of a road network’s links.
+>This information may be limited to regular traffic lanes or extended to cover additional components of the road surface (see above). In the latter case, it should additionally provide insights into which of those components can serve vehicular traffic and their respective contribution to directional traffic capacity.
+
+**Road network links and their physical attributes – _gradients_:** the minimum information required for indicating the degree of inclination (or the rate ascent/descent) of a road network’s links.
+>This information is typically identified as the maximum gradient along specific links of the road network to highlight restrictions for particular vehicle classes. Provided information may consider the direction of a given road network link, indicating whether the slope ascends (positive value) or descends (negative value), thus providing insights into the direction of elevation change.
+
+**Road network links and their physical attributes – _junctions_:** the minimum information required for identifying the location of a junction and its relationship with the remaining entities of the road network.
+>Considering that road network nodes may be used for technical reasons, e.g., defining an additional/separate road link between two positions that exhibit different physical attributes (e.g., substantially different road width or higher/lower number of lanes), junctions may be addressed in a separate manner as decision/choice nodes through which traffic can be diverted to another route.
+
+>The relationship of a given junction with the remaining network can be expressed via the indication of the whether it is a start/end junction of a given link.
+
+![Figure 1](/Figures/RTTI_fig_1.png)
+> Reference/additional info: https://inspire.ec.europa.eu/id/document/tg/tn
+
+**Road classification:** the minimum information required for distinguishing the links of a road network encompassing form of way, functional, or other concerns.
+>According to INSPIRE data specification on transport networks (based on EuroRoads and GDF specifications), ‘form of way classification’ considers the physical properties of each road link (including accessible mobility modes), whereas ‘functional classification’ considers the importance of  each road link within the road network. It is important to note that the ‘form of way classification’ and ‘functional classification’ elements may vary in meaning across different European countries due to the lack of harmonization.
+
+![Figure 2](/Figures/RTTI_fig_2.png)
+>Reference/additional info: https://inspire.ec.europa.eu/id/document/tg/tn
+
+**Location of tolling stations:** the minimum information required for identifying the location (e.g., coordinates of a specific point, location along a linear element, mileage) of tollbooths (physical or virtual) collecting automatically or manually tolls from passing traffic.
+
+**Location of service areas and rest areas:** the minimum information required for identifying the location of places (typically along motorways) where drivers/motorists can stop, rest, and get access to available service facilities and amenities.
+
+>Safe and secure truck parking areas are not explicitly mentioned in this definition as they fall into the scope of DR (EU) 885/2015. SSTPAs can be addressed as a subset of rest areas (or in a separate manner if they strictly operate as such).
+
+**Location of recharging points for electric vehicles and the conditions for their use:** the minimum information required for disseminating the geographic location of recharging infrastructure (recharging pools), dedicated to electric vehicles, including the exact position of recharging points along with the conditions for their use.
+
+>A recharging pool denotes an area equipped with one or more charging stations. These recharging stations can take the form of fixed wall-mounted appliances (wallboxes) or self-standing units, both of which are connected to an electrical supply point. Depending on the number of recharging points integrated into a single station, they can facilitate the simultaneous recharging of multiple electric vehicles. A recharging point may be fitted with several connectors but can only recharge one vehicle at a time. The minimum information package must encompass the exact location of the whole infrastructure (including recharging points), contact options, opening times, a list of accepted payment methods, as well as information on the allowed vehicle characteristics (e.g., size, weight). Information on location may be separated into exit and entrance location for larger areas or areas with strict rules for driving directions (e.g., along motorways). 
+
+**Location of compressed natural gas, liquefied natural gas, liquefied petroleum gas stations:** the minimum information required for disseminating the geographic location of compressed natural gas, liquefied natural gas, and liquefied petroleum gas stations.
+
+>Each station must have at least one refill point allowing the refuelling of one vehicle at a time. The minimum information package must encompass the exact location of the whole infrastructure (including refuelling points), contact options, opening times, a list of accepted payment methods, as well as information on the allowed vehicle characteristics (e.g., size, weight).  Information on location may be separated into exit and entrance location for larger areas or areas with strict rules for driving directions (e.g., along motorways). Additionally, crucial details involve specifying the provided type of gas.
+
+**Location of of refuelling points and stations for all other fuel types:** the minimum information required for disseminating the geographic location of refuelling points and stations, encompassing other (than the above) fuel types (e.g., gasoline, diesel, biodiesel).
+
+>Each station must have at least one refill point allowing the refuelling of one vehicle at a time. The minimum information package must encompass the exact location of the whole infrastructure (including refuelling points), contact options, opening times, a list of accepted payment methods, as well as information on the allowed vehicle characteristics (e.g., size, weight).  Information on location may be separated into exit and entrance location for larger areas or areas with strict rules for driving directions (e.g., along motorways). Additionally, crucial details involve specifying the provided type of fuel.
+
+### Crucial types of data on regulations and restrictions
+
+**Static and dynamic traffic regulations:** TBD
+
+**Traffic circulation plans:** the minimum information required for disseminating and describing the content of plans that are developed by local authorities to control and guide traffic flows in response to known and recurring traffic conditions as well as in consideration of seasonality effects and existing limitation and constraints (e.g., existence of school zones).
+>Traffic Circulation Plans (TCPs) are crafted by local authorities to manage and direct traffic flows based on recurring traffic conditions, seasonal variations, and pre-existing restrictions (such as school zones). These plans enclose strategies and measures, including, for example, the designation of particular road links that certain users or vehicle types should avoid, aimed at improving traffic flow conditions and achieving societal objectives like lowering emissions and minimizing accidents. The strategies implemented within TCPs are part of a broader, more enduring “traffic control policy”, meaning that the imposed measures remain active and applicable irrespective of the level of achievement of their overarching goal. TCPs are reviewed and updated by local authorities with a certain time frequency.
+
+>On the other hand, Traffic Management Plans (TMPs) provide for the allocation of traffic control measures in response to specific predefined (or not) traffic scenarios, such as the management of heavy congestion or the closure of strategic routes due to extreme weather events, maintenance works, or a serious road accident. The objective of TMPs is to anticipate arrangements for controlling and guiding traffic flows in real-time conditions and informing road users about the traffic situation in a consistent and timely manner. TMPs, which differ in detail according to local circumstances, apply in the following cases:\
+•	major traffic accidents\
+•	congested traffic\
+•	extreme weather conditions\
+•	natural or technological catastrophes\
+•	special events (sports, cultural, leisure) resulting in unusually high traffic volumes, capacity constraints, or temporary road closures.
+
+>TMPs are either proactive or reactive to traffic conditions and events. They may be planned in advance (e.g., for managing cross-border traffic flows or in relation to specific weather events and road closures) and involve several traffic management authorities (e.g., more than one TMCs) due to the need for activating various traffic management measures, often requiring negotiation, acceptance, confirmation, and feedback. TMP may also be built in response to unexpected conditions and events (reactively) through real-time negotiation.
+
+>The structural components of TMPs are:\
+•	Title of the plan\
+•	Concerned area\
+•	Precise localization (location markers) and traffic direction\
+•	Map-based information (indication of section(s) closed, diversions, rerouting, etc.)\
+•	Applicable measures/traffic management procedures\
+•	Coordinating actor\
+•	Description of TMP workflow (activation request → implementation request → acknowledgements → implementation and information → suspension/deactivation request → acknowledgements)\
+•	Actions of stakeholders and competent authorities\
+•	Information and communication actions (e.g., traffic signs, radio messages, etc.)\
+•	Related traffic restrictions (e.g., along the diversion routes)
+
+>TCPs can be defined in a similar fashion to TMPs or in a more simplified manner. However, the key difference between TCPs and TMPs is that TMPs are deactivated when the event or condition (scenario) that has triggered their activation is resolved (which is not the case for TCPs).
+
+>Reference/additional info: https://rno-its.piarc.org/en/network-operations-rno-activities-planning-and-reporting/traffic-management-plans
+
+### Other types of data on regulations and restrictions
+
+**Location and identification of traffic signs reflecting traffic regulations and identifying dangers:** the minimum information required for identifying the location and disseminating the type and direction of signs (or panels) reflecting various traffic regulations and potential hazards on the road (e.g., warning signs).
+>The following conditions/restrictions are mentioned in the Delegated Regulation (EU) 2022/670:\
+•	Access conditions for tunnels (legal or physical restrictions/limitations on vehicles to access a specific tunnel)\
+•	Access conditions for bridges (legal or physical restrictions/limitations on vehicles to access a specific bridge)\
+•	Permanent access restrictions (permanent legal or physical restrictions/limitations on vehicles to access a specific road link of any type)\
+•	Other traffic regulations (other traffic regulations that apply along specific road link of any type)
+
+>Considering that traffic signs correspond to specific points on a road link and may apply to specific directions, their location can be encoded through either the point or linear location referencing methods mentioned in the description of the SRTI data categories.
+
+>Access restrictions/limitations can on a case-by-case basis be weight-, vehicle type-, and propulsion technology-related or depend on infrastructure categorization (e.g., tunnel categories).
+
+>According to CEN/TS 17268 (TN-ITS model), other traffic regulations may involve mandatory turns to be taken, prohibited turns, prohibited stopping, prohibited use of audible devices, mandatory use of snow chains. CEN/TS 17268 TN-ITS model supports the provision of any traffic sign defined in the ISO 14826 graphic data dictionary (GDD).
+
+>Reference/additional info: https://inspire.ec.europa.eu/id/document/tg/tn
+
+**Other static and dynamic traffic regulations:** TBD
+
+**Identification of tolled roads, applicable fixed road user charges and available payment methods:** the minimum information required for indicating that tolls apply on a road link as well as for disseminating information about the applicable road user charges and available payment methods.
+>Fixed road user charges are typically vehicle class dependent. A commonly used classification of vehicles for determining the applicable charges along European highways/motorways is the following:\
+•	Class 1: Motorcycles, tricycle vehicles\
+•	Class 2: Light vehicles (with or without trailer and height less than a threshold value)\
+•	Class 3: Trucks, busses, and other heavy-duty vehicles with less than 4 axes (with or without trailer and height greater than a threshold value)\
+•	Class 4: Trucks and other heavy-duty vehicles with 4 or more axes
+
+>Fixed road user charges may also be time condition dependent. Time conditions can be discerned into (weekday/weekend) rush and regular periods. 
+
+>Available payment methods in tolled roads may include a) on cash, b) by credit/debit card, c) electronic payment, and d) via toll stickers. Electronic payment can contextually be associated with a free-flow tolling system.
+
+**Variable road user charges and available payment methods, including retail channels and fulfilment methods:** the minimum information required for indicating that variable charges apply on specific road links or within certain urban areas based on the attributes of a congestion (or emission) pricing policy as well as for disseminating the applicable variable road user charges and available payment methods.
+>Similar to fixed road user charges, variable road user charges may be vehicle class and time condition dependent. Furthermore, they may be propulsion technology and traffic/environmental conditions depedent based on the attributes of the applicable congestion/emission pricing policy.
+
+>Available payment methods may include a) on cash, b) by credit/debit card, c) electronic payment, and d) via toll stickers.
+
+### Crucial types of data on the state of the network
+
+**Road closures:** dynamic information disseminating the closure of road links of any type.
+>Road closures are typically directional and discerned into planned and unplanned.
+
+>**Planned road closures:** Correspond to **scheduled** shutdowns of entire road links (all lanes per direction) or sections of a given road link for various reasons, such as large public events. Such closure are typically announced in advance to enable road users plan alternative routes and minimize disruption to their travel plans and diaries.\
+>**Unplanned road closures:** Correspond to **unexpected** shutdown of entire road links (all lanes per direction) or sections of a given road link without prior notice due to unforeseen events, such as sudden infrastructure failures. Such closures typically disrupt traffic flow in a mode-agnostic or mode-specific manner, causing substantial delays.
+
+>The unambiguous description of road closures requires the provision of information about their time validity (applies to planned road closures) or time of occurrence (applies to unplanned road closures).
+
+>Reference/additional info: TISA RTTI 5 Star Rating Scheme
+
+**Lane closures:** dynamic information disseminating the closure of a lane on road links of any type.
+>Lane closures can be discerned into planned and unplanned in a similar fashion with "road closures".
+
+>Their unambiguous description requires the provision of information about their time validity (applies to planned lane closures) or time of occurrence (applies to unplanned lane closures).
+
+**Roadworks:** dynamic information disseminating that roadworks take place on a specific segment/section of a road link (or on the entire road link).
+>Roadworks typically affect (fully or partially) individual lanes and seldom all lanes of a given direction, such that travel in this direction is still possible. In case that roadworks affect all lanes, such that travel in a given direction is no longer possible, they match with road closures.
+
+>Roadworks are also discerned into planned and unplanned.
+
+>**Planned roadworks**: Correspond to **scheduled** maintenance, construction, or repair activities carried out on entire road links or specific segments/sections. Such activities are typically pre-arranged and annouced in advance by local authorities or road operators to minimize traffic disturbances and enable road users plan alternative routes.\
+>**Unplanned roadworks**: Correspond to maintenance, repair, or construction activities that are undertaken **unexpectedly** and without prior scheduling. Such activities are typically initiated in response to urgent issues, such as road damage or infrastructure failures that require immediate actions.
+
+>The unambiguous description of roadworks requires the provision of information about their time validity (i.e., start/estimated end time - if both possible for unplanned roadworks). The provision of such information facilitates their classification into _short-term_ and _long-term_ ones.
+
+>Reference/additional info: TISA RTTI 5 Star Rating Scheme
+
+**Temporary traffic management measures:** dynamic information disseminating temporary traffic management measures in response to the current state of or conditions along a particular segment/link or part of a road network, which can change over time due to several factors (e.g., road works, weather conditions, special events).
+>Temporary/dynamic traffic management measures are usually developed by traffic managers with the aim of controlling and guiding traffic flows in response to unexpected/non-recurring traffic disturbances, but also with the aim of increasing road safety.
+
+>Therefore, they are linked to Traffic Management Plans (TMPs). For more details, please consult the descriptions under the "Traffic circulation plans" static data category.
+
+### Other types of data on the state of the network
+
+**Bridge closures:** dynamic information disseminating the closure of road rinks corresponding to bridges.
+>Bridge closures can be discerned into planned and unplanned in a similar fashion with "road closures".
+
+>Their unambiguous description requires the provision of information about their time validity (applies to planned bridge closures) or time of occurrence (applies to unplanned bridge closures).
+
+**Accidents and incidents:** dynamic information disseminating the occurrence of an accident or incident on a specific segment/section of a road link.
+>"Accidents" and "incidents" are used to describe different types of situations/events with implications on prevailing traffic conditions (obstruction).
+
+>**Accidents:** Typically correspond to unexpected situations/events that may result in damage to vehicles, injuries, or loss of life. Such situations/events may include collisions between vehicles, single-vehicle accidents (e.g., running off the road or hitting a stationary object), or accidents between vehicles and pedestrians, cyclists, or other vulnerable road users.\
+>**Incidents:** Typically encompass a broader range of situations/events, i.e., any unplanned or unexpected situation/event that disrupts the normal flow of traffic, even if it does not involve a collision or injuries. This may include breakdowns, vehicle fires, spilled cargo, road debris, or even non-traffic-related situations/events like protests or animals on the roadway.
+
+>The unambiguous description of accidents/incidents requires the provision of information about their type and time of occurrence.
+
+**Poor road conditions:** dynamic information disseminating the prevalence of poor conditions on a specific segment/section of a road link (or on the entire road link).
+>Poor road conditions may happen due to various reasons. For more details, please consult SRTI data categories.
+
+>The unambiguous description of poor road conditions requires the provision of information about the time of their occurrence and type (optionally).
+
+**Weather conditions affecting road surface and visibility:** dynamic information disseminating the prevalence of (adverse) weather conditions affecting road surface and visibility and, thus, implying accident hazards for road users.
+>The unambiguous description of weather conditions affecting road surface and visibility requires the provision of information about the time of their occurrence, type (optionally), and affected parts of the road network.
+
+### Types of data on the real-time use of the network
+
+**Traffic volume:** dynamic information indicating the number of vehicles, distinguished (or not) into light and heavy vehicles, passing through a specific point (road section) within a specified time period per direction.
+>Traffic volume denotes the number of vehicles or persons passing a point (road section) within a defined time period, while flow rate denotes the number of vehicles or persons passing a given point per unit time (e.g., vehicles/hour).
+
+**Traffic speed:** dynamic information indicating the travel speed of vehicles passing from a specific point or along a specific road segment within a given time aggregation interval.
+>Speed values along specific road segments typically refer to average speeds (or harmonic/interquartile mean speeds) corresponding to a given time aggregation interval.
+
+>Speed values on specific points typically refer to road section averages (e.g., obtained from inductive loop detectors).
+
+**Location and length of traffic queues:** dynamic information indicating the point of a traffic queue dissipation and its total length.
+>Vehicles are said to be in queue when the inflow rate in a road section exceeds the outflow rate.
+
+>The point of traffic queue dissipation typically coincides with junctions/intersections in congested urban road networks. However, in sparse road networks queueing can happen upstream at a junction/intersection for various reasons, such as road accidents.
+
+>The length of a queue may be simply defined as the interval between the point of queue dissipation and the last vehicle in queue. It can be measured in distance units or by the number of queueing objects.
+
+>Reference/additional info: https://www.piarc.org/en/activities/Road-Dictionary-Terminology-Road-Transport/Dictionary-Terminology-Translation-Definition-Term-Search?q=queue&s=en&t1=&t2=&scope=term=queue
+
+**Travel times:** dynamic information indicating the time required for observed vehicles to cross a specific road segment or to travel from a given point to another over a specified route under prevailing traffic conditions.
+>According to PIARC data dictionary, travel time is defined as the time spent between two defined points.
+
+>Reference/additional info: https://www.piarc.org/en/activities/Road-Dictionary-Terminology-Road-Transport/Dictionary-Terminology-Translation-Definition-Term-Search?q=travel%20time&s=en&t1=&t2=&scope=term=travel%20time
+
+**Waiting times at border crossings:** dynaming information indicating the average time required for vehicles to wait between their arrival at the queue of a border crossing (if any) and their departure.
+
+**Availability of delivery areas:** dynamic information reflecting the availability of designated places along a road network reserved for loading/unloading operations.
+
+**Availability of recharging points and stations for electric vehicles:** dynamic information reflecting the state and status of charging points and stations for electric vehicles.
+
+**Availability of refuelling points and stations for alternative fuel types:** dynamic information reflecting the state and status of refuelling points and stations corresponding to alternative fuels.
+>According to Alternative Fuels Infrastructure Directive (2014/94/EU), alternative fuels include (excluding electricity):\
+•	Hydrogen\
+•	Biofuels\
+• Synthetic and paraffinic fuels\
+• Natural gas, including biomethane, in gaseous form (compressed natural gas (CNG)) and liquefied form (liquefied natural gas (LNG)), and\
+• Liquefied petroleum gas (LPG)
+
+**Price of ad hoc recharging/refuelling:** dynamic information reflecting the time varying price of ad hoc recharging/refuelling.
+>Prices are typically expressed in unitary terms (e.g., €/litre, €/hour, etc.)

@@ -1,0 +1,53 @@
+# DELEGATED REGULATION (EU) 885/2013 supplementing the ITS Directive (2010/40/EU)
+## Provision of information services for safe and secure parking places for trucks and commercial vehicles
+### Static data
+**Identification information of the truck parking area:** the minimum information required for identifying a truck parking area, such as its name, national identifier (if available), and address, including the country and territorial unit in which it is located.
+>If a truck parking area is located along a motorway, the address information may extend to the name/identifier of the motorway, the mileage position of the parking area, and the direction of the motorway segment through which the parking area is accessible.
+
+>If a truck parking area is located outside a motorway or nearby another transport infrastructure, the address information may extend to the urban road name and number (if available) or any other information that enables the unambiguous identification of its location (e.g., postal address, INSPIRE-related road identification method).
+
+**Location information of the entry point in the truck parking area:** the minimum information required for indicating the position of the entry point of a truck parking area.
+>The position of the entry point can be expressed either as a geographic location (coordinates) or as a location reference along the road network (point or linear reference).
+
+>Various coordinate systems can be used for geographic locations, including the European Terrestrial Reference System 1989 (ETRS89), which is the EU-recommended frame of reference for geodetic data.
+
+>Reference/additional info: https://docs.datex2.eu/location/6_PointCoordinates.html
+
+**Indication of the Exit to be taken:** the minimum information required for identifying the exit or exits (if more than one) to be taken by a truck driver typically along a motorway to approach/move away from a truck parking area.
+>This information may encompass the number, location code, and/or name of the junction(s) to be taken.
+
+**Primary Road identifier/direction<sup>1</sup> & Primary Road identifier/direction<sup>2</sup> (related to truck parking):** the minimum information required for indicating the road(s) (one or more – as applies) through which a truck parking area is accessible.
+>This information may include alphanumerical values indicating: a) the name of the road, b) its national identifier (if available), and c) the destination of the applicable direction (e.g., destination city).
+
+**Distance from primary road:** the distance (typically in meters) between the exit to be taken and the entry point of a truck parking area.
+>Distance should preferably be addressed as travel distance (and not as straight-line distance).
+
+>For truck parking areas located outside motorways, primary roads might be addressed as the roads of the highest hierarchy located in their vicinity. For the same reason, this data element might be addressed as optional.
+
+**Price and currency of truck parking places:** the minimum information required for disseminating the (possibly time dependent) cost of parking and the applicable currency.
+>|Correspondence to DATEX II|
+>|:-------------------|
+>| “Facilities” package of DATEX II holds the necessary information about the available payment methods and applicable currency. This component can be plugged into datasets involving any service provision (including parking and energy). “Rates” package holds the necessary information about tariffs that can be applied to the provision of parking services.         |
+
+>Reference/additional info: https://docs.datex2.eu/facilities/index.html; https://docs.datex2.eu/_static/data/v3.4/umlmodel/html/index.htm?goto=3:2:7:663
+
+**Description of security, safety, and service equipment (at truck parking):** the minimum information required for disseminating and describing the amenities offered by a truck parking area, including security, safety, and service amenities.
+>Security and safety equipment are primarily concerned with protecting people and property (e.g., fences, barriers, cameras), while service equipment is focused on providing necessary amenities and services to truck and commercial vehicle drivers (e.g., motel, toilets, water pumps).
+
+>Relevant information portals distinguish the amenities offered by truck parking areas into: a) security amenities, b) comfort amenities, and c) infrastructural (service) amenities. Typical examples include (security amenities) fences and barriers, (comfort amenities) shower, medical care, and hotel, and (service ammenities) truck wash, fuel station, truck repair, and power supply. The current data category may also involve the assessment of the security level of a parking area (e.g., following a five-start ranking) and the conformance to certain standards and requirements (e.g., TAPA or ESPORG certified parking area).
+
+**Information on specific equipment or services for specific goods vehicles:** the minimum information required for disseminating special amenities offered by a truck parking area for specific goods vehicles.
+>The designation of a vehicle as a “specific goods vehicle” may often mean that it must comply with particular regulatory standards, safety requirements, and possibly possess special permits to operate. The specifics can vary by jurisdiction, but generally, this category includes vehicles that are equipped, structured, or modified in a way that makes them suitable for carrying defined types of cargo. This can range from refrigerated trucks for perishable items, tankers for liquids or gases, flatbeds for heavy machinery or construction materials, to vehicles with special containers for hazardous substances.
+
+>Specific goods vehicles require different kinds of amenities to ensure steady ambient conditions (in case of refrigerated goods vehicles) or the safety and security of their surroundings (in case of dangerous goods vehicles).
+
+**Contact information of the parking operator (for truck parking users):** the minimum information required for enabling truck parking users to reach out to parking operators (or associated company), including the name and surname (optional), telephone number, and e-mail address of their contact point.
+
+**Contact information of the parking operator (for truck parking users):** an appropriate value reflecting whether a parking operator agrees (or not) to make his/her contact information visible to the public.
+>If a parking operator does not agree, the field values corresponding to contact   information become non-publicly visible.
+
+### Dynamic data
+**Dynamic data on the availability of parking places:** dynamic information reflecting the state and status of a truck parking area.
+>The “state” of the truck parking area generally refers to the physical condition or the inherent characteristics of a truck parking area at any given time. This might include its capacity (number of parking spots available), infrastructure quality (e.g., pavement condition, lighting), and available amenities (e.g., rest areas, fuel stations, maintenance facilities).
+
+>The “status” of the truck parking area typically refers to the current operational condition of the truck parking area. This may, for example, include whether it is open, closed, or full at the moment.
