@@ -118,7 +118,9 @@
 
 >Reference/additional info: https://inspire.ec.europa.eu/id/document/tg/tn
 
-**Other static and dynamic traffic regulations:** TBD
+**Other static and dynamic traffic regulations:** the minimum information required for disseminating and describing the content of other traffic rules and driving regulations that are either permanent (static) or changeable over time (dynamic), considering ongoing events and prevailing conditions.
+
+>The current data category follows a similar structure to “Static and dynamic traffic regulations”. It is associated with other machine-interpretable rules and restrictions that may, for instance, relate to parking, pedestrian zones, HOV lanes, bicycle lanes, and residential areas.
 
 **Identification of tolled roads, applicable fixed road user charges and available payment methods:** the minimum information required for indicating that tolls apply on a road link as well as for disseminating information about the applicable road user charges and available payment methods.
 >Fixed road user charges are typically vehicle class dependent. A commonly used classification of vehicles for determining the applicable charges along European highways/motorways is the following:\
