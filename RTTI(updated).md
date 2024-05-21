@@ -168,9 +168,7 @@
 >Reference/additional info: TISA RTTI 5 Star Rating Scheme
 
 **Temporary traffic management measures:** dynamic information disseminating temporary traffic management measures in response to the current state of or conditions along a particular segment/link or part of a road network, which can change over time due to several factors (e.g., road works, weather conditions, special events).
->Temporary/dynamic traffic management measures are usually developed by traffic managers with the aim of controlling and guiding traffic flows in response to unexpected/non-recurring traffic disturbances, but also with the aim of increasing road safety.
-
->Therefore, they are linked to Traffic Management Plans (TMPs). For more details, please consult the descriptions under the "Traffic circulation plans" static data category.
+>Temporary/dynamic traffic management measures are usually developed by traffic managers with the aim of controlling and guiding traffic flows in response to unexpected/non-recurring traffic disturbances, but also with the aim of increasing road safety. Therefore, they are linked to Traffic Management Plans (TMPs). For more details, please consult the descriptions under the "Traffic circulation plans" static data category.
 
 ### Other types of data on the state of the network
 
